@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tarjetes-flexbox</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            min-height: 100%;
+        }
+        img{
+            width: 100%;
+        }
+        body{
+            font-family: "georgia" cursive;
+            font-size: 18px;
+            background: linear-gradient(38deg,blue,purple);
+            color: purple;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding: 2em 4em;
+            justify-content: center;
+        }
+        .dissenyador{
+            display: flex;
+            flex-direction: column;
+            width: 25em;
+            margin: 1em;
+            background: rgba(240,240,240,0.9);
+            border-radius: 20px;
+            box-shadow:0 0 20px purple;
+        }
+        .dissenyador_img{
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            width: 100%;
+            height: 200px;
+            background: purple;
+        }
+        .dissenyador_img img{
+            border-radius: 20px 20px 0 0;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            mix-blend-mode: hard-light;
+        }
+        .dissenyador:first-child .dissenyador_img img{
+            object-position: top;
+        }
+        .dissenyador:last-child .dissenyador_img img{
+            object-position: top;
+        }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content: space-between;
+            border-bottom: 1px solid purple;
+            align-items: baseline;
+        }
+        h3{
+            font-style: italic;
+            font-weight: bold;
+        }
+        span{
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+        .dissenyador_contingut{
+            flex-grow: 1;
+            margin: 1em 1em 0.5em 1em;
+            font-size: 0.9em;
+            line-height: 1.4em;
+            text-align: justify;
+            hyphens: auto;
+        }
+        footer{
+            background: purple;
+            color: white;
+            font-size: 0.9em;
+            font-style: italic;
+            border-radius: 0 0 20px 20px;
+            padding: 0.6em;
+        }
+        @media (max-width:600px){
+            body{
+                font-size: 16px;
+            }
+            .container{
+                flex-direction: column;
+            } 
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="dissenyador">
+           <div class="dissenyador_img">
+               <img src="img/BarbaraKrugerPhotoBW.jpg" alt="Barbara Kruger">
+           </div>
+           <header>
+               <h3>Barbara Kruger</h3>
+               <span>1945</span>
+           </header>
+           <p class="dissenyador_contingut">
+               Barbara Kruger es una artista conceptual estadounidense. Gran parte de su trabajo consiste en fotografías en blanco y negro cubiertas de un pie de foto declarativo, de letras blancas sobre rojo con tipografía Futura Bold Oblique. Las frases en sus obras a menudo incluyen el uso de pronombres en inglés como "you", "your", "I", "we", y "they".
+           </p>
+           <footer class="dissenyador_peu">
+               Es conocida principalmente por su obra basada en la fotografía, que combina su formación como diseñadora gráfica con su interés por la poesía y la influencia de los medios de comunicación de masas.
+           </footer>
+       </div>
+       <div class="dissenyador">
+           <div class="dissenyador_img">
+               <img src="img/1395c3e5f5c4d03233d58c631c113de2.png" alt="Alejandro Magallanes">
+           </div>
+           <header>
+               <h3>Alejandro Magallanes</h3>
+               <span>1971</span>
+           </header>
+           <p class="dissenyador_contingut">
+               Reconocido mundialmente por sus posters e ilustraciones comprometidas con la realidad social de su país. Su estilo personal se caracteriza por la unión de imágenes y palabras, una mezcla de todo lo que el artista ve y de lo cuál se nutre.
+               En 1996 fundó, junto a Leonel Sagahón, el despacho La Máquina del Tiempo. Ha trabajado para diversas instituciones sociales y culturales, en el desarrollo de proyectos editoriales, imágenes institucionales, carteles, etc., y en 1997 coordinó la exposición “No todos los carteles son bonitos“.
+           </p>
+           <footer class="dissenyador_peu">
+               Para Alejandro Magallanes “una imagen sí vale más que mil palabras”, pero las palabras generan millones de imágenes diferentes y son su gran fuente de inspiración.
+           </footer>
+    </div>
+</div>
+</body>
+</html>
